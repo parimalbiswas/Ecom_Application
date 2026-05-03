@@ -1,0 +1,12 @@
+com\parimal\ecom\dto\UserRequest.class
+com\parimal\ecom\controller\UserController.class
+com\parimal\ecom\dto\AddressDTO.class
+com\parimal\ecom\service\UserServiceImpl.class
+com\parimal\ecom\model\Product.class
+com\parimal\ecom\service\UserService.class
+com\parimal\ecom\dto\UserResponse.class
+com\parimal\ecom\model\User.class
+com\parimal\ecom\EcomApplication.class
+com\parimal\ecom\repository\UserRepository.class
+com\parimal\ecom\model\Address.class
+com\parimal\ecom\model\UserRole.class
