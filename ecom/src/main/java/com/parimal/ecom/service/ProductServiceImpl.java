@@ -66,6 +66,29 @@ public class ProductServiceImpl implements ProductService {
         return false;
     }
     
+    @Override
+    public List<ProductResponse> searchActiveProducts(String keyword) {
+        if (keyword == null || keyword.trim().isEmpty()) {
+            return productRepository.findByActiveTrue()
+                    .stream()
+                    .map(this::convertToResponse)
+                    .collect(Collectors.toList());
+        }
+        return productRepository.searchProducts(keyword)
+                .stream()
+                .filter(Product::getActive)
+                .map(this::convertToResponse)
+                .collect(Collectors.toList());
+    }
+    
+    @Override
+    public List<ProductResponse> getActiveProducts() {
+        return productRepository.findByActiveTrue()
+                .stream()
+                .map(this::convertToResponse)
+                .collect(Collectors.toList());
+    }
+    
     
     // Helper method to convert Product entity to ProductResponse DTO
     private ProductResponse convertToResponse(Product product) {
