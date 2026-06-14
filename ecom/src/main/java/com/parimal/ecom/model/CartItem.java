@@ -23,6 +23,7 @@ public class CartItem {
     @ManyToOne
     @JoinColumn(name = "product_id", nullable = false)
     private Product product;
+    private Integer quantity;
     private BigDecimal price;
 
     @CreationTimestamp

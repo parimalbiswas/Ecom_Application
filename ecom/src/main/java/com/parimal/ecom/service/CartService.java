@@ -4,6 +4,6 @@ import com.parimal.ecom.dto.CartItemRequest;
 
 public interface CartService {
 
-    void addToCart(Long userId, CartItemRequest request);
+    boolean addToCart(Long userId, CartItemRequest request);
 
 }
